@@ -10,12 +10,13 @@ spec:
       app: myapp
   template:
     metadata:
+      name: myapp-daemonset
       labels:
         app: myapp
     spec:
       containers:
       - name: myapp-container
-        image: us.icr.io/<your SN labs namespace>/myapp:v1
+        image: us.icr.io/sn-labs-u212031/myapp:v1
         ports:
         - containerPort: 3000
           name: http
